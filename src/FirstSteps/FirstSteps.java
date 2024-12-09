@@ -44,5 +44,10 @@ public class FirstSteps {
         System.out.println(myLongValue);
         System.out.println(castingDataTyepValue);
 
+        System.out.println("Float values range from " + Float.MIN_VALUE + " to " + Float.MAX_VALUE);
+        System.out.println("Double values range from " + Double.MIN_VALUE + " to " + Double.MAX_VALUE);
+
+
+
     }
 }
