@@ -21,8 +21,8 @@
   - **short**: with = 16 bits
   - **int**:   with = 32 bits
   - **long**:  with = 64 bits
-  - float
-  - double
+  - float  with = 32 bits
+  - double with = 64 bits
   - char
   - boolean
 - These types as the building blocks of data manipulation
@@ -54,5 +54,4 @@ The plus sign, +,  when used in System.out.print will print different data types
 ```
 
 - The double data type can be specified as a numeric literal with a suffix of either lowercase 'd', or uppercase 'D', but because doubles are the default in Java, the suffix is optional to use.
-
 - On the other hand, the float data type can be specified as a numeric literal with a suffix of lowercase 'f', or uppercase 'F'.  This suffix is required if you are assigning a real number to a variable that was declared with a float type
