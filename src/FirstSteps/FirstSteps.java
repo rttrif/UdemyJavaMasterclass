@@ -35,7 +35,14 @@ public class FirstSteps {
 //      int test = 2147483648;
 //      System.out.println(test)
 
+        byte myByteValue = 2;
+        short myShortValue = 300;
+        int myIntValue = 200;
+        long myLongValue = 50_000L + (myByteValue + myShortValue + myIntValue) * 10L;
 
+        short castingDataTyepValue = (short) (1000 + (myByteValue + myShortValue + myIntValue) * 10);
+        System.out.println(myLongValue);
+        System.out.println(castingDataTyepValue);
 
     }
 }

@@ -45,9 +45,14 @@ The plus sign, +,  when used in System.out.print will print different data types
 - You cannot declare variables with different data types in a single statement.
 - If you declare multiple variables of the same data type in a single statement, you must specify the data type only once before any variable names.
 
-
 **Casting means** to treat or convert a number, from one type to another. We put the type we want the number to be, in parentheses
 
-```ja
+```java
 (byte) (myMinByteValue / 2);
+
+
 ```
+
+- The double data type can be specified as a numeric literal with a suffix of either lowercase 'd', or uppercase 'D', but because doubles are the default in Java, the suffix is optional to use.
+
+- On the other hand, the float data type can be specified as a numeric literal with a suffix of lowercase 'f', or uppercase 'F'.  This suffix is required if you are assigning a real number to a variable that was declared with a float type
