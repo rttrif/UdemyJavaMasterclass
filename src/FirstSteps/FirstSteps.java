@@ -47,7 +47,12 @@ public class FirstSteps {
         System.out.println("Float values range from " + Float.MIN_VALUE + " to " + Float.MAX_VALUE);
         System.out.println("Double values range from " + Double.MIN_VALUE + " to " + Double.MAX_VALUE);
 
+        char myCharValue = 'A';
 
+        boolean myBooleanValue = true;
+
+        String myStringValue = "Hello World";
+ 
 
     }
 }
