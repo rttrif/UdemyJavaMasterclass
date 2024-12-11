@@ -55,3 +55,5 @@ The plus sign, +,  when used in System.out.print will print different data types
 
 - The double data type can be specified as a numeric literal with a suffix of either lowercase 'd', or uppercase 'D', but because doubles are the default in Java, the suffix is optional to use.
 - On the other hand, the float data type can be specified as a numeric literal with a suffix of lowercase 'f', or uppercase 'F'.  This suffix is required if you are assigning a real number to a variable that was declared with a float type
+- String class it's not primitive Java's class it's built-in class
+-
