@@ -58,3 +58,9 @@ The plus sign, +,  when used in System.out.print will print different data types
 - String class it's not primitive Java's class it's built-in class
 - **The String class is immutable**, but can be used much like a primitive data type.
 - **The StringBuilder class is mutable**, meaning it can be changed, but does not share the String's special features, such as being able to assign it a String literal or use the plus operator on it.
+- **Operators** in Java are special symbols that perform specific operations on one, two, or three operands, and then return a result.
+- **An operand** is a term used to describe any object that is manipulated by an operator.
+- **An expression** is formed by combining variables, literals, method return values and operators.
+- Comments are ignored by the computer, and are added to a program, to help describe something. Comments are there for humans to read.
+- When you use the addition operator with chars, it is these numbers in memory that get added together. **The character values don't get concatenated.**
+-
