@@ -12,7 +12,7 @@ public class KeywordsAndExpressions {
             highScore = 1000 + highScore;
         }
 
-
+        double kilometers2 = (100 * 1.609344);
     }
 
 }
