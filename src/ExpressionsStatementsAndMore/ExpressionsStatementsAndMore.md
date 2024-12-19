@@ -27,7 +27,7 @@ public static void methodName(p1type p1, p2type p2, {more}){
 ```
 - **Parameters and arguments** are terms that are often used interchangeably by developers.But technically, a **parameter is the definition as shown in the method declaration**, and **the argument will be the value that's passed to the method when we call it**.
 - To execute a method that's defined with parameters, you have to pass variables, values, or expressions that match the type, order and number of the parameters declared.
-- ![img.png](img.png)
+- ![img.png](assets/img.png)
 - Java states that a return statement returns control to the invoker of a method. The most common usage of the return statement, is to return a value back from a method.
 - In a method that doesn't return anything, in other words, a method declared with void as the return type, a return statement is not required.  It is assumed and execution is returned after the last line of code in the method is executed.
 - But in methods that do return data, a return statement with a value is required.
@@ -37,7 +37,7 @@ public static void methodName(p1type p1, p2type p2, {more}){
 - In many languages, methods can be defined with default values, and you can omit passing values for these when calling the method.
   **But Java doesn't support default values for parameters.**
   **But it's important to state again, in Java, the number of arguments you pass, and their type, must match the parameters in the method declaration exactly.**
-- 
+
 
 
 
