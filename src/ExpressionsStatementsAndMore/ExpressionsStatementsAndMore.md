@@ -39,10 +39,13 @@ public static void methodName(p1type p1, p2type p2, {more}){
   **But it's important to state again, in Java, the number of arguments you pass, and their type, must match the parameters in the method declaration exactly.**
 
 
+### Methods Overloading
 
-
-
-
+- **Method overloading occurs when a class has multiple methods with the same name, but the methods are declared with different parameters.** Java can resolve which method it needs to execute based on the arguments being passed when the method is invoked.
+- A method signature consists of the name of the method, and the uniqueness of the declaration of its parameters. In other words, a signature is unique, not just by the method name, but in combination with the number of parameters, their types, and the order in which they are declared.
+- **The type, order, and number of parameters, in conjunction with the name, make a method signature unique.**
+  **A unique method signature is the key for the Java compiler, to determine if a method is overloaded correctly.**
+  The name of the parameter is not part of the signature, and therefore it doesn't matter, from Java's point of view, what we call our parameters.
 
 
 
