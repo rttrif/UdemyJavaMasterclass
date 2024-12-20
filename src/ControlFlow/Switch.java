@@ -1,4 +1,4 @@
-package Switch;
+package ControlFlow;
 
 public class Switch {
     public static void main(String[] args) {
