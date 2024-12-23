@@ -81,7 +81,8 @@ ___
 - **A setter** is a method on a class that sets the value of a private field.   
 - **The purpose of these methods is to control and protect access to private fields.**
 ___
-
+#### this 
+`this` is a special reference name for the object or instance, which it can use to describe itself. And we can use this to access fields on the class.
 
 
 
