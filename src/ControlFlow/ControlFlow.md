@@ -81,6 +81,13 @@ Local variables are a way to store and manipulate temporary data. In addition to
 
 **An object** is called an instance of a particular class.
 
+The most common way to create an object is to use the **new keyword**. The new keyword creates an instance of a class, and you can optionally pass data when creating that instance to set up data on that object.
+
+```java
+String s = new String("Hello");
+```
+
+
 ![img.png](assets/img1.png)
 
 **static and instance fields**
