@@ -83,12 +83,28 @@ ___
 ___
 #### this 
 `this` is a special reference name for the object or instance, which it can use to describe itself. And we can use this to access fields on the class.
+___
+#### Constructor
+A **constructor** is used in the creation of an object. It is a special type of code block that has a specific name and parameters, much like a method. It has the same name as the class itself, and it doesn't return any values.  You never include a return type from a constructor, not even void. You can, and should, specify an appropriate access modifier to control who should be able to create new instances of the class, using this constructor.
 
+```java
+public class Account { // This is the class declaration
 
+	public Account() { // This is  the constractor declaration
+		// Constructor code is code tobe execute as the object is created.
+	}
+}
+```
 
+**The default constructor**
+If a class contains no constructor declarations, then a default constructor is implicitly declared. This constructor has no parameters and is often called the no-args (no arguments) constructor. If a class contains any other constructor declarations, then a default constructor is NOT implicitly declared.
 
+**Constructor overloading**
+Constructor overloading is declaring multiple constructors with different parameters. The number of parameters can be different between constructors. Or if the number of parameters is the same between two constructors, their types, or order of the types must differ.
 
-
+**Constructor chaining with `this()`**
+Constructor chaining is when one constructor explicitly calls another overloaded constructor. You can only use constructor chaining, within constructors. You must use the special statement `this()` to execute another constructor, passing it arguments if required.
+And `this()` must be the first executable statement if it's used from another constructor.
 
 
 
