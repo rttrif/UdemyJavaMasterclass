@@ -9,6 +9,7 @@ public class Account {
 
 //    Default constructor
     public Account(){
+        this("1234789", 2.5, "Default name", "Default email", "Default phone");
         System.out.println("Empty constructor called");
     }
 
@@ -17,8 +18,16 @@ public class Account {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.customerName = customerName;
-        this.customerEmail = customerEmail;
-        this.customerPhone = customerPhone;
+        customerEmail = customerEmail;
+        customerPhone = customerPhone;
+    }
+
+//    Generated constructor
+    public Account(String customerPhone, String customerEmail, String customerName) {
+        this("999999", 111.11, customerName, customerPhone, customerEmail);
+//        this.customerPhone = customerPhone;
+//        this.customerEmail = customerEmail;
+//        this.customerName = customerName;
     }
 
     public void depositFunds(double depositAmount) {
