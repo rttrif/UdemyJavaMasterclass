@@ -105,7 +105,52 @@ Constructor overloading is declaring multiple constructors with different parame
 **Constructor chaining with `this()`**
 Constructor chaining is when one constructor explicitly calls another overloaded constructor. You can only use constructor chaining, within constructors. You must use the special statement `this()` to execute another constructor, passing it arguments if required.
 And `this()` must be the first executable statement if it's used from another constructor.
+___
+#### Object vs Instance vs Class
+![[Pasted image 20241228200109.png]]
+___
+#### Static vs Instance Variables
 
+**Static Variables**
+- Declared by using the keyword `static`.
+- Static variables are also known as static member variables.
+- Every instance of the class shares the same static variable.
+- If changes are made to that variable, all other instances of that class will see the effect of that change.
 
+**Instance Variables**
+- They **don't use** the `static` keyword.
+- They're also known as fields or member variables.
+- Instance variables belong to a specific instance of a class.
+- Each instance has its own copy of an instance variable.
+- Every instance can have a different value.
+- Instance variables represent the state of a specific instance of a class.
 
+*Instance Variables == fields == member variables*
+___
+#### Static vs. Instance Methods
 
+**Static Methods**
+- Static methods are declared using a static modifier.
+- Static methods can't access instance methods and instant variables directly.
+- They're usually used for operations that don't require any data from an instance of the class (from `this`).
+- Inside a static method, we can't use the `this` keyword.
+
+#### Instance Methods
+- Instance methods belong to an instance of a class.
+- To use an instance method, we have to instantiate the class first, usually by using the new keyword.
+- Instance methods can access instance methods and instance variables directly.
+- Instance methods can also access static methods and static variables directly.
+![[Pasted image 20241228201805.png]]
+___
+#### Plain Old Java Object
+**A plain old Java object** (whose acronym is **POJO**) is a class that generally only has instance fields. It's used to house data and pass data between functional classes. It usually has no other, or very few methods, other than getters and setters for the instance fields.
+
+A POJO also might be called a bean or a **JavaBean**.  A JavaBean is just a POJO with some extra rules applied to it. 
+
+A POJO is sometimes called an **Entity** because it mirrors database entities.  
+
+Another acronym is **DTO for Data Transfer Object**. It's a description of an object that can be modeled as just data.
+___
+#### Annotation
+Annotations are a type of metadata. Metadata is a way to formally describe additional information about our code. Annotations are more structured and have more meaning than comments. This is because they can be used by the compiler or other types of pre-processing functions, to get information about the code. Metadata doesn't affect how the code runs so this code will still run with or without the annotation.
+___
