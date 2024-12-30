@@ -154,3 +154,15 @@ ___
 #### Annotation
 Annotations are a type of metadata. Metadata is a way to formally describe additional information about our code. Annotations are more structured and have more meaning than comments. This is because they can be used by the compiler or other types of pre-processing functions, to get information about the code. Metadata doesn't affect how the code runs so this code will still run with or without the annotation.
 ___
+#### The Record type
+The record is a special class that contains data that's not meant to be altered. In other words, it seeks to achieve immutability for the data in its members. It contains only the most fundamental methods, such as constructors and accessors.
+
+```java
+public record LPAStudent(String id, String name, String date, String classList){}
+```
+
+The record header consists of record components, a comma-delimited list of components.
+For each component in the header, Java generates:
+- A field with the same name and declared type as the record component.
+- The field is declared private and final.
+-  The field is sometimes referred to as a component field.
