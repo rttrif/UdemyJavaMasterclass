@@ -200,3 +200,7 @@ All subclasses can execute methods even though the code is declared on the paren
 And as you've seen, some advantages of Polymorphism are:
 - It makes code simpler.
 - It encourages code extensibility.
+___
+#### java.lang.Object
+This is because every class you create in Java actually extends a special Java class.   That class is named Object, and it's in the `java.lang` package.
+![[Pasted image 20250102172406.png]]
