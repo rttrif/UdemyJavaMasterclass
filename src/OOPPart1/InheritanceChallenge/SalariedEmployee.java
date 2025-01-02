@@ -24,4 +24,5 @@ public class SalariedEmployee extends Employee {
         terminate("12/12/2025");
         isRetired = true;
     }
+
 }

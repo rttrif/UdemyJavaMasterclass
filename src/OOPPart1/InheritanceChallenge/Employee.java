@@ -20,5 +20,4 @@ public class Employee extends Worker {
                 "} " + super.toString();
     }
 
-
 }

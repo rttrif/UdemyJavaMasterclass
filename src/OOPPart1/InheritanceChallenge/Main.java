@@ -21,4 +21,5 @@ public class Main {
         System.out.println("Mary's Paycheck = $" + mary.collectPay());
         System.out.println("Mary's Holiday Pay = $" + mary.getDoublePay());
     }
+
 }

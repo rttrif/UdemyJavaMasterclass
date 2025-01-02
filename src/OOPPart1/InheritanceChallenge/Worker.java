@@ -37,4 +37,5 @@ public class Worker {
                 ", endDate='" + endDate + '\'' +
                 '}';
     }
+
 }
