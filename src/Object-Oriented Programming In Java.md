@@ -255,3 +255,18 @@ When we **override** a method, it's recommended to put `@Override` immediately a
 ![[Pasted image 20250103144445.png]]
 ![[Pasted image 20250103144513.png]]
 ___
+## Composition
+Inheritance defines an **IS A** relationship.    
+Composition defines a **HAS A** relationship.
+
+> **Composition is actually modeling parts, and those parts make up a greater whole.** Composition is a way to make the combination of classes act like a single coherent object.
+
+As a general rule, when you're designing your programs in Java, you probably want to look at composition first. Most of the experts will tell you that as a rule, look at using composition before implementing inheritance.
+
+The reasons composition is preferred over inheritance:
+- Composition is more flexible. You can add parts in or remove them, and these changes are less likely to have a downstream effect.
+- Composition provides functional reuse outside of the class hierarchy, meaning classes can share attributes & behavior, by having similar components, instead of inheriting functionality from a parent or base class.
+- Java's inheritance breaks encapsulation because subclasses may need direct access to a parent's state or behavior.
+
+Inheritance is less flexible. Adding a class to or removing a class from a class hierarchy may impact all subclasses from that point. In addition, a new subclass may not need all the functionality or attributes of its parent class.
+
