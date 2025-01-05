@@ -269,4 +269,22 @@ The reasons composition is preferred over inheritance:
 - Java's inheritance breaks encapsulation because subclasses may need direct access to a parent's state or behavior.
 
 Inheritance is less flexible. Adding a class to or removing a class from a class hierarchy may impact all subclasses from that point. In addition, a new subclass may not need all the functionality or attributes of its parent class.
+___
+## Encapsulation
 
+> In Java, encapsulation means hiding things by making them private or inaccessible.
+
+Why would we want to hide things in Java?
+- To make the interface simpler, we may want to hide unnecessary details.
+- To protect the integrity of data on an object, we may hide or restrict access to some of the data and operations.
+- To decouple the published interface from the internal details of the class, we may hide actual names and types of class members.
+
+**Benefits of Encapsulation**
+That's really one of the huge benefits of encapsulation. Changes made do not affect any other code. It's like a black box in many ways.
+
+**Encapsulation Principles**
+- Create constructors for object initialization, which enforces that only objects with valid data will get created.
+- Use the private access modifier for your fields.
+- Use setter methods sparingly and only as needed.
+- Use access modifiers that aren't private, only for the methods that the calling code needs to use.
+___
