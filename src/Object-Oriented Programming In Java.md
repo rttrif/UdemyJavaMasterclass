@@ -288,3 +288,42 @@ That's really one of the huge benefits of encapsulation. Changes made do not aff
 - Use setter methods sparingly and only as needed.
 - Use access modifiers that aren't private, only for the methods that the calling code needs to use.
 ___
+## Polymorphism
+
+> Simply stated, polymorphism means many forms.
+
+Polymorphism in Java allows us to write code that can call a method, but the actual method that gets executed can be different for different objects at runtime. **This means that the behavior that occurs during program execution depends on the runtime type of the object, which might differ from its declared type in the code**. 
+For polymorphism to work, the declared type must have a relationship with the runtime type. Inheritance is one way to establish this relationship, where a subclass can override a method from its superclass, enabling polymorphic behavior.
+Polymorphism enables you to write generic code based on the base class or a parent class. And this code in the main method is extendable, meaning, it doesn't have to change as new subclasses become available.
+___
+#### Variable Type Inference
+`var` is a special contextual keyword in Java that lets our code take advantage of Local Variable Type Inference. By using var as the type, we're telling Java to figure out the compile-time type for us.
+
+**Local Variable Type Inference (LVTI)**
+One of the benefits is to help with readability of code. Another is to reduce boilerplate code.
+It's called Local Variable Type Inference for a reason, because:
+- It can't be used in field declarations on a class.
+- It can't be used in method signatures, either as a parameter type or a return type.
+- It can't be used without an assignment because the type can't be inferred in that case.
+- It can't be assigned a null literal, again, because a type can't be inferred in that case.
+
+**Run Time vs. Compile Time Typing**
+You can think of the compile time type as the declared type. This type is declared as a variable reference, a method return type, or a method parameter, for example.
+In the case of Local Variable Type Inference (LVTI), we don’t explicitly declare a type for the compiled reference type. Instead, it gets inferred by the compiler, but the byte code generated is the same as if we had declared the type.
+In many cases, the compile time type is the declared type to the left of the assignment operator.
+What is returned on the right side of the assignment operator from whatever expression or method is executed, sometimes can only be determined at runtime, when the code is executing conditionally through the statements in the code.
+You can assign a runtime instance to a different compile time type, only if certain rules are followed.
+We can assign an instance to a variable of the same type, or a parent type, or a parent's parent type, including java.lang.Object, the ultimate base class.
+
+The `instanceof` operator lets you test the type of an object or instance. The reference variable you are testing is the left operand. The type you are testing for is the right operand. If the JVM can identify that an object matches the type, it can extract data from the object without casting.
+___
+#### Organizing Java Classes
+**A package is a namespace that organizes a set of related types.** In general, a package corresponds to a folder or directory on the operating system, but this isn't a requirement. The package structure is hierarchical, meaning you group types in a tree-like fashion.
+You can use any legal Java identifier for your package names, but common practice has **package names in all lowercase**.
+
+> - Packages let us reuse common class names across different libraries or applications and provide a way to identify the correct class either with an import statement or a qualifying name.
+> - Packages let us organize our classes by functionality or relationships.
+> - Packages also let us encapsulate our classes from classes in other packages.
+
+
+
