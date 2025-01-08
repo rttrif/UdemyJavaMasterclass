@@ -324,6 +324,66 @@ You can use any legal Java identifier for your package names, but common practic
 > - Packages let us reuse common class names across different libraries or applications and provide a way to identify the correct class either with an import statement or a qualifying name.
 > - Packages let us organize our classes by functionality or relationships.
 > - Packages also let us encapsulate our classes from classes in other packages.
+___
+## Abstraction
 
+**Generalization**
+When you start modeling objects for your application, you start by identifying what features and behavior your objects have in common. We generalize when we create a class hierarchy.
+A base class is the most general class, the most basic building block, which everything can be said to have in common.
 
+**Abstraction**
+Part of generalizing is using abstraction. You can generalize a set of characteristics and behavior into an abstract type. Abstraction simplifies the view of a set of items' traits and behavior, so we can talk about them as a group, as well as generalize their functionality.
+
+**Java supports abstraction in several different ways.**
+- Java allows us to create a class hierarchy, where the top of the hierarchy, the base class, is usually an abstract concept, whether it's an abstract class or not.
+- Java lets us create abstract classes. 
+- Java gives us a way to create interfaces.
+
+**Abstract method**
+
+> **An abstract method** **has a method signature, and a return type**, but doesn't have a method body. Because of this, we say an abstract method is **unimplemented**. Its purpose is to describe behavior, which any object of that type will always have. **You can think of an abstract method as a contract.** This contract promises that all subtypes will provide the promised functionality, with the agreed upon name and arguments.
+
+**Concrete method**
+A concrete method has a method body, usually with at least one statement. This means it has operational code, that gets executed, under the right conditions. A concrete method is said to **implement** an abstract method, if it overrides one. Abstract classes and interfaces can have a mix of abstract and concrete methods.
+
+![[Pasted image 20250108224610.png]]
+
+#### The abstract class
+The abstract class is declared with the `abstract` modifier. **An abstract class is a class that's incomplete.** You can't create an instance of an abstract class. An abstract class can still have a constructor, which will be called by its subclasses during their construction.
+
+```java
+abstract class Animal {}
+```
+> **An abstract class's purpose is to define the behavior its subclasses are required to have, so it always participates in inheritance.** Classes extend abstract classes and can be concrete.
+
+A class that extends an abstract class can also be abstract itself. And finally an abstract class can extend a concrete class.
+
+#### The abstract method
+An abstract method is declared with the modifier abstract.
+```java
+abstract class Animal {
+	public abstract void move();
+}
+```
+**Abstract methods can only be declared on an abstract class or interface.**
+
+**Subclasses have choices when they extend a concrete class with concrete methods.**
+- They can inherit the same behavior from their parent.  This means they don't have to even declare the methods in their class bodies.
+- They can override the behavior from their parent.  This means they have a method with the same signature, but with their own code in there, ignoring the parent's code altogether.
+- They can also override the behavior but leverage the parent's method code, by calling the parent's method, using super in their overridden code.
+
+**An abstract class that extends another abstract class has some flexibility.**
+- It can implement all of the parent's abstract methods.
+- It can implement some of them.
+- Or it can implement none of them.
+- It can also include additional abstract methods, which will force subclasses to implement both Animal's abstract methods, as well as Mammal's.
+
+**Why use an abstract class?**
+In truth, you may never need to use an abstract class in your design, but there are some good arguments for using them.
+
+An abstract class in your hierarchy forces the designers of subclasses to think about, and create unique and targeted implementations, for the abstracted methods.
+
+It may not always make sense to provide a default, or inherited implementation of a particular method.
+
+An abstract class can't be instantiated, so if you're using abstract classes to design a framework for implementation, this is definitely an advantage.
 
