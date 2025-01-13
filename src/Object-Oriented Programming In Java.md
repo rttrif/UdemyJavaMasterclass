@@ -386,4 +386,75 @@ An abstract class in your hierarchy forces the designers of subclasses to think 
 It may not always make sense to provide a default, or inherited implementation of a particular method.
 
 An abstract class can't be instantiated, so if you're using abstract classes to design a framework for implementation, this is definitely an advantage.
+___
+## Interfaces
 
+**Interface vs. Abstract Class**
+
+**An interface is similar to an abstract class, although it isn't a class at all.** It's a **special type**, that's more **like a contract between the class and client code**, that the compiler enforces. By declaring it's using an interface, your class must implement all the abstract methods on the interface. A class agrees to this because it wants to be **known by that type**, by the outside world or client code. **An interface lets classes that might have little else in common be recognized as a special reference type.**
+
+**Declaring an interface**
+```java
+public interface FlightEnabled {}
+```
+An interface is usually named according to the set of behaviors it describes. Many interfaces will end in 'able', like Comparable, and Iterable. Meaning something is capable or can perform a given set of behaviors.
+
+A class is associated to an interface by using the implements clause in the class declaration.
+```java
+public class Bird implements FlightEnabled {}
+
+// Because of this declaration, we can use FlightEnabled as the reference type and assign it an instance of bird.
+
+FlightEnabled flier = new Bird();
+```
+
+**A class can only extend a single class**, which is why Java supports only single inheritance.
+
+However, **a class can implement many interfaces**, providing flexibility and modularity. This allows for the combination of different sets of behaviors, making interfaces a powerful feature. **A class can both extend another class and implement one or more interfaces.**
+
+```java
+public class Birds extends Animal implements FlightEnabled, Trackble {}
+```
+
+> [!note ] **The abstract modifier is implied on an interface**
+
+![[Pasted image 20250113224254.png]]
+>[!note] All members on an interface are implicitly public
+
+- If you omit an access modifier on a **class member**, it's **implicitly package private**.
+- If you omit an access modifier on an **interface member**, it's **implicitly public**.
+
+**This is an important difference, and one you need to remember.**
+
+Changing the access modifier of a method to **protected** on an interface, is **a compiler error**, whether the method is concrete or abstract. Only a concrete method can have private access.
+
+**Interfaces let us take objects that may have almost nothing in common, and write reusable code so we can process them all in a similar manner.** **Interfaces allow us to type our objects differently, by behavior only.**
+___
+#### The `final` modifier in Java
+**When we use the `final` modifier, we prevent any further modifications to that component.**
+- a final method means it can't be overridden by a subclass.
+- a final field means an object's field can't be reassigned or given a different value after its initialization.
+- a final static field is a class field that can't be reassigned or given a different value after the class's initialization process.
+- a final class can't be overridden, meaning no class can use it in the extends clause.
+- a final variable in a block of code, means that once it's assigned a value any remaining code in the block can't change it.
+- a final method parameter means we can't assign a different value to that parameter in the method code block.
+
+> [!tip] The final static field, is what you're really creating, when you declare a field on an interface.
+
+____
+#### Constants in Java
+**A constant in Java is a variable that can't be changed.**  A constant variable is a final variable of primitive type, or type String, that is initialized with a constant expression.
+Constants in Java are usually named with all uppercase letters and with underscores between words. A static constant means we access it via the type name.
+
+> [!tip] A field declared on an Interface is always public, static and final
+
+___
+#### Coding to an Interface
+**Interfaces can be extended, similar to classes using the extends keyword.**
+
+Both interfaces and abstract classes are **abstracted reference types**. Reference types can be used in code, as variable types, method parameters, return types, list types, and so on.
+When you use an abstracted reference type, this is referred to as coding to an interface. This means your code doesn't use specific types, but rather, more generalized ones, usually an interface type.
+
+This technique is preferred, because it allows many runtime instances of various classes to be processed uniformly by the same code. It also allows for substitutions of some other class or object that still implements the same interface, without forcing a major refactor of your code.
+
+**Using interface types as the reference type is considered a best practice.** Coding to an interface scales well, to support new subtypes, and it helps when refactoring code.
