@@ -1,8 +1,8 @@
 package Abstractions.Interfaces;
 
 
-
-enum FlightStages implements Trackable {GROUNDED, LAUNCH, CRUISE, DATA_COLLECTION;
+enum FlightStages implements Trackable {
+    GROUNDED, LAUNCH, CRUISE, DATA_COLLECTION;
 
     @Override
     public void track() {
@@ -10,6 +10,11 @@ enum FlightStages implements Trackable {GROUNDED, LAUNCH, CRUISE, DATA_COLLECTIO
         if (this != GROUNDED) {
             System.out.println("Monitoring " + this);
         }
+    }
+
+    public FlightStages getNextStage() {
+        FlightStages[] allStages = values();
+        return allStages[(ordinal() + 1) % allStages.length];
     }
 }
 
@@ -72,6 +77,14 @@ interface FlightEnabled {
     void land();
 
     void fly();
+
+    default FlightStages transition(FlightStages stage) {
+//        System.out.println("Transition not implemented on " + getClass().getName());
+//        return null;
+        FlightStages nextStage = stage.getNextStage();
+        System.out.println("Transitioning from " + stage + " to " + nextStage);
+        return nextStage;
+    }
 
 }
 
