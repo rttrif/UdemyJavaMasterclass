@@ -458,3 +458,14 @@ When you use an abstracted reference type, this is referred to as coding to an i
 This technique is preferred, because it allows many runtime instances of various classes to be processed uniformly by the same code. It also allows for substitutions of some other class or object that still implements the same interface, without forcing a major refactor of your code.
 
 **Using interface types as the reference type is considered a best practice.** Coding to an interface scales well, to support new subtypes, and it helps when refactoring code.
+
+___
+#### The Interface Extension Method - the default method
+An extension method is identified by the modifier default, so it's more commonly known as the default method.
+This method is a **concrete** method, meaning it has a code block and we can add statements to it.  In fact, it has to have a method body, even if the body is just an empty set of curly braces. It's a lot like a method on a superclass because we can override it.  Adding a default method doesn't break any classes currently implementing the interface.
+
+Just like overriding a method on a class, you have three choices when you override a default method on an interface.
+- You can choose not to override it at all.
+- You can override the method and write code for it, so that the interface method isn't executed.
+- Or you can write your own code, and invoke the method on the interface, as part of your implementation.
+___
