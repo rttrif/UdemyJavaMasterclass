@@ -517,3 +517,47 @@ ___
 - You want to specify the behavior of a particular data type, but you're not concerned about who implements its behavior.
 - You want to separate different behavior.
 ![[Pasted image 20250116211637.png]]
+___
+## Generics
+Java supports generic types, such as classes, records and interfaces.  It also supports generic methods.
+
+```java
+// Regular class declaration 
+class ITellYou {
+	private String field;
+}
+
+// Generic class decalaration 
+class YouTellYou<T> {
+	private T field;
+}
+```
+The thing to notice with the generic class, is that the class declaration has angle brackets with a T in them, directly after the class name. T is the placeholder for a type that will be specified later. This is called a type identifier, and it can be any letter or word, but T which is short for Type is most commonly used. *Using T is just a convention.*
+**For the generic class, the field's type is that placeholder, just T, and this means it can be any type at all. The T in the angle brackets means it's the same type as the T, specified as the type of the field.**
+
+**Using a generic class as a reference type**
+![[Pasted image 20250117215229.png]]
+In the declaration of a reference type that uses generics, the type parameter is declared in angle brackets. The reference type is `ArrayList`, the type parameter (or parameterized type) is `String`, which is declared in angle brackets, and `listOfString` is the variable name.
+
+You can have more than one type parameter.
+```java
+class Team<T, S, U> {
+	private String field;
+}
+```
+A few letters are reserved for special use cases.
+**The most commonly used type parameter identifiers are:**
+- E for Element (used extensively by the Java Collections Framework).
+- K for Key (used for mapped types).
+- N for Number.
+- T for Type.
+- V for Value.
+- S, U, V etc. for 2nd, 3rd, 4th types.
+
+When you use generic classes, either referencing them or instantiating them, it's definitely recommended that you include a type parameter.
+
+But you can still use them without specifying one.  This is called the Raw Use of the reference type.
+
+The raw use of these classes is still available for backwards compatibility, but it's discouraged for several reasons.
+- Generics allow the compiler to do compile-time type checking when adding and processing elements in the list.
+- Generics simplify code, because we don't have to do our own type checking and casting, as we would if the type of our elements was Object.
