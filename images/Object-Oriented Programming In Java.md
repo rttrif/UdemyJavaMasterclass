@@ -560,4 +560,18 @@ But you can still use them without specifying one.  This is called the Raw Use o
 
 The raw use of these classes is still available for backwards compatibility, but it's discouraged for several reasons.
 - Generics allow the compiler to do compile-time type checking when adding and processing elements in the list.
-- Generics simplify code, because we don't have to do our own type checking and casting, as we would if the type of our elements was Object.
+- Generics simplify code, because we don't have to do our own type checking and casting, as we would if the type of our elements was Object
+___
+#### Comparable Interface
+For an array, we can simply call `Arrays.sort` and pass it an array, but as I've previously mentioned, the elements in the array need to implement Comparable.
+
+Types like String or primitive wrapper classes like Integer or Character are sortable, and this is because they do actually implement this interface.
+```java
+public interface Comparable<T> {
+	int compareTo(T o);
+}
+```
+It's a generic type, meaning it's parameterized. Any class that implements this interface, needs to implement the `compareTo` method.
+This method takes one object as an argument, as the letter o, and compares it to the current instance, shown as this.
+The table on this slide shows what the results of the `compareTo` method should produce, when implemented.
+![[Pasted image 20250124223200.png]]
