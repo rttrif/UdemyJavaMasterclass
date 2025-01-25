@@ -562,7 +562,7 @@ The raw use of these classes is still available for backwards compatibility, but
 - Generics allow the compiler to do compile-time type checking when adding and processing elements in the list.
 - Generics simplify code, because we don't have to do our own type checking and casting, as we would if the type of our elements was Object
 ___
-#### Comparable Interface
+#### The Comparable Interface
 For an array, we can simply call `Arrays.sort` and pass it an array, but as I've previously mentioned, the elements in the array need to implement Comparable.
 
 Types like String or primitive wrapper classes like Integer or Character are sortable, and this is because they do actually implement this interface.
@@ -575,3 +575,20 @@ It's a generic type, meaning it's parameterized. Any class that implements this 
 This method takes one object as an argument, as the letter o, and compares it to the current instance, shown as this.
 The table on this slide shows what the results of the `compareTo` method should produce, when implemented.
 ![[Pasted image 20250124223200.png]]
+___
+#### The  Comparator Interface
+The Comparator interface is similar to the Comparable interface, and the two can often be confused with each other.
+Its declaration and primary abstract method are shown here, in comparison to Comparable.
+Notice that the method names are different, compare vs. compareTo.
+
+```java 
+public interface Comparable<T> {
+	int compareTo(T o);
+}
+
+public interface Comparabtor<T> {
+	int compare (T o1, T o2);
+}
+```
+The compare method takes two arguments vs. one for compareTo, meaning that it will compare the two arguments to one another and not one object to the instance itself.
+![[Pasted image 20250125224327.png]]
