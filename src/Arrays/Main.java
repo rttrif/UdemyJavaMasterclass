@@ -20,10 +20,30 @@ public class Main {
         System.out.println("last = " + firstTen[arrayLength - 1]);
 
         int[] newArray;
-        newArray = new int[] {5, 4, 3, 2, 1};
+//        newArray = new int[] {5, 4, 3, 2, 1};
+        newArray = new int[5];
+
+        for (int i = 0; i < newArray.length; i++) {
+            newArray[i] = newArray.length - i;
+        }
+
         for (int i = 0; i < newArray.length; i++) {
             System.out.print(newArray[i] + " ");
         }
+        System.out.println("\n" + "+".repeat(50));
+        // The Enhanced for loop
+        for (int element: newArray) {
+            System.out.print(element + " ");
+        }
+        System.out.println("\n" + "+".repeat(50));
+        System.out.println(newArray);
+
+        Object[] objectArray = new Object[10];
+        objectArray[0] = "Hello";
+        objectArray[1] = new StringBuilder("World");
+        objectArray[2] = newArray;
+
+        System.out.println(objectArray);
 
     }
 }
