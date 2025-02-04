@@ -75,3 +75,7 @@ We can use this method to test if a value is already in our array, but there are
 - It returns a **-1** when no match was found.
 - It's important to remember that a positive number **may not be the position of the first match.**
 - If your array has duplicate values and you need to find the first element, other methods should be used.
+___
+#### Reference Types vs. Value Types
+When you assign an object to a variable, the variable becomes a reference to that object. This is true of arrays, but the array has yet another level of indirection if it's an array of objects. **This means every array element is also a reference.**
+
