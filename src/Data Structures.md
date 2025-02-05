@@ -78,4 +78,21 @@ We can use this method to test if a value is already in our array, but there are
 ___
 #### Reference Types vs. Value Types
 When you assign an object to a variable, the variable becomes a reference to that object. This is true of arrays, but the array has yet another level of indirection if it's an array of objects. **This means every array element is also a reference.**
+___
+####  Variable arguments (varargs)
+```java
+public static void main(String... args) {
 
+}
+```
+
+`...` - This is a special designation for Java that means Java will take zero, one, or many Strings as arguments to this method and create an array with which to process them in the method. The array will be called `args` and be of type String.
+___
+#### Java's nested Arrays
+An array element can actually itself be an array.  It's known as a nested array, or an array assigned to an outer array's element. This is how Java supports two and three dimensional arrays of varying dimensions.
+
+**Two-Dimensional Array**
+A two-dimensional array can be thought of as a table or matrix of values with rows and columns.
+![[Pasted image 20250205222234.png]]
+
+A 2-dimensional array doesn't have to be a uniform matrix though. This means the nested arrays can be different sizes, as I show with this next initialization statement.
